@@ -14,13 +14,11 @@
   "routes": [
     {
       "route": "/*",
-      "statusCode": 401,
+      "redirect": "/.auth/login/aad",
+      "statusCode": 302,
       "allowedRoles": [
         "authenticated"
-      ],
-      "headers": {
-        "re*ponseOverrides": "redirect\": \"/.auth/login/aad"
-      }
+      ]
     }
   ]
 }
