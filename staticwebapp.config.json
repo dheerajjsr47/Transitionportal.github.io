@@ -10,5 +10,17 @@
         }
       }
     }
-  }
+  },
+  "routes": [
+    {
+      "route": "/*",
+      "statusCode": 401,
+      "allowedRoles": [
+        "authenticated"
+      ],
+      "headers": {
+        "re*ponseOverrides": "redirect\": \"/.auth/login/aad"
+      }
+    }
+  ]
 }
